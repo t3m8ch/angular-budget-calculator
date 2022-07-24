@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { RevenueModel } from './revenues-list/revenue.model';
+import { ExpenseModel } from './expenses-list/expense.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'budget-calculator';
+  revenues: RevenueModel[] = [];
+  expenses: ExpenseModel[] = [];
 }

@@ -1,3 +1,4 @@
 <h2 class='tui-text_h3'>Доходы</h2>
-<app-activity-item title='Телеграм-бот на Си' [amount]='30000.00'></app-activity-item>
+<app-activity-item *ngFor='let revenue of revenues' [title]='revenue.title'
+                   [amount]='revenue.amount.toNumber()'></app-activity-item>
 <button tuiButton appearance='outline' class='tui-space_top-4'>Добавить доход</button>

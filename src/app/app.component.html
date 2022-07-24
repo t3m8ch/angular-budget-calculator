@@ -2,13 +2,13 @@
   <div class='tui-container tui-container_adaptive'>
     <div class='tui-row tui-row_adaptive'>
       <div class='tui-col_md-4 tui-col_xs-12'>
-        <app-revenues-list></app-revenues-list>
+        <app-revenues-list [revenues]='revenues'></app-revenues-list>
       </div>
       <div class='tui-col_md-4 tui-col_xs-12'>
-        <app-expenses-list></app-expenses-list>
+        <app-expenses-list [expenses]='expenses'></app-expenses-list>
       </div>
       <div class='tui-col_md-4 tui-col_xs-12'>
-        <app-budget></app-budget>
+        <app-budget [revenues]='revenues' [expenses]='expenses'></app-budget>
       </div>
     </div>
   </div>
