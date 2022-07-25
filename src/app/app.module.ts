@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { TuiInputModule, TuiInputNumberModule, TuiIslandModule } from '@taiga-ui/kit';
+import { TuiInputModule, TuiInputNumberModule, TuiIslandModule, TuiMarkerIconModule } from '@taiga-ui/kit';
 import { TuiCurrencyPipeModule, TuiMoneyModule } from '@taiga-ui/addon-commerce';
 import { ExpensesListComponent } from './expenses-list/expenses-list.component';
 import { RevenuesListComponent } from './revenues-list/revenues-list.component';
@@ -36,6 +36,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     TuiInputNumberModule,
     TuiCurrencyPipeModule,
     ReactiveFormsModule,
+    TuiMarkerIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -28,4 +28,12 @@ export class AppComponent {
   addExpense(expense: ExpenseModel) {
     this.expenses.push(expense);
   }
+
+  onDeleteRevenue(revenueId: string) {
+    this.revenues = this.revenues.filter((revenue) => revenue.id !== revenueId)
+  }
+
+  onDeleteExpense(expenseId: string) {
+    this.expenses = this.expenses.filter((expense) => expense.id !== expenseId)
+  }
 }

@@ -1,15 +1,16 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-activity-item',
   templateUrl: './activity-item.component.html',
 })
 export class ActivityItemComponent implements OnInit {
+  @Input() id!: string;
   @Input() title!: string;
   @Input() amount!: number;
+  @Output() activityDeleted = new EventEmitter<string>();
 
-  constructor() {
-  }
+  constructor() {}
 
   ngOnInit(): void {
     if (this.title === undefined) {

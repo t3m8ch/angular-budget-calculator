@@ -8,10 +8,10 @@ import { RevenueModel } from '../models/revenue.model';
 export class RevenuesListComponent implements OnInit {
   @Input() revenues: RevenueModel[] = [];
   @Output() addRevenue = new EventEmitter();
+  @Output() deleteRevenue = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

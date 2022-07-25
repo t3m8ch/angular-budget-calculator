@@ -1,7 +1,9 @@
 <h2 class='tui-text_h3'>Доходы</h2>
 <app-activity-item
   *ngFor='let revenue of revenues'
+  [id]='revenue.id'
   [title]='revenue.title'
   [amount]='revenue.amount.toNumber()'
+  (activityDeleted)='deleteRevenue.emit($event)'
 ></app-activity-item>
 <button tuiButton appearance='outline' class='tui-space_top-4' (click)='addRevenue.emit()'>Добавить доход</button>

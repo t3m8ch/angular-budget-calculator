@@ -8,10 +8,10 @@ import { ExpenseModel } from '../models/expense.model';
 export class ExpensesListComponent implements OnInit {
   @Input() expenses: ExpenseModel[] = [];
   @Output() addExpense = new EventEmitter();
+  @Output() deleteExpense = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }
