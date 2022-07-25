@@ -9,6 +9,6 @@
     <tui-input-number class='tui-space_top-2' [postfix]='"RUB" | tuiCurrency' formControlName='amount'>
       Сумма
     </tui-input-number>
-    <button tuiButton class='tui-space_top-3'>Добавить доход</button>
+    <button tuiButton class='tui-space_top-3' [disabled]='form.invalid'>Добавить доход</button>
   </form>
 </ng-template>

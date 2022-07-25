@@ -1,7 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { RevenueModel } from '../revenues-list/revenue.model';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { BigNumber } from 'bignumber.js';
+import { _thereAreNoWhiteSpace } from '../validators/white-space.validator';
 
 @Component({
   selector: 'app-create-revenue-dialog',
@@ -12,8 +13,8 @@ export class CreateRevenueDialogComponent implements OnInit {
   @Output() openChange = new EventEmitter<boolean>();
   @Output() revenueCreated = new EventEmitter<RevenueModel>();
   form = new FormGroup({
-    title: new FormControl(),
-    amount: new FormControl(),
+    title: new FormControl(null, [Validators.required, _thereAreNoWhiteSpace]),
+    amount: new FormControl(null, [Validators.required, _thereAreNoWhiteSpace]),
   });
 
   constructor() {}
