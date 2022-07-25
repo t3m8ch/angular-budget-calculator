@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { BigNumber } from 'bignumber.js';
-import { ExpenseModel } from '../expenses-list/expense.model';
+import { ExpenseModel } from '../models/expense.model';
 import { _thereAreNoWhiteSpace } from '../validators/white-space.validator';
 
 @Component({

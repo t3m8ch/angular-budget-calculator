@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { RevenueModel } from './revenue.model';
+import { RevenueModel } from '../models/revenue.model';
 
 @Component({
   selector: 'app-revenues-list',

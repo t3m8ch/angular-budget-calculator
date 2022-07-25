@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { RevenueModel } from './revenues-list/revenue.model';
-import { ExpenseModel } from './expenses-list/expense.model';
+import { RevenueModel } from './models/revenue.model';
+import { ExpenseModel } from './models/expense.model';
 
 @Component({
   selector: 'app-root',

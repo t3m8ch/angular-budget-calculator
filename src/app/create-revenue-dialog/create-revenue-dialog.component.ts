@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { RevenueModel } from '../revenues-list/revenue.model';
+import { RevenueModel } from '../models/revenue.model';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { BigNumber } from 'bignumber.js';
 import { _thereAreNoWhiteSpace } from '../validators/white-space.validator';
