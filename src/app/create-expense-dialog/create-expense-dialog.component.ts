@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { BigNumber } from 'bignumber.js';
 import { ExpenseModel } from '../models/expense.model';
-import { _thereAreNoWhiteSpace } from '../validators/white-space.validator';
+import { thereAreNoWhiteSpace } from '../validators/white-space.validator';
 
 @Component({
   selector: 'app-create-expense-dialog',
@@ -13,8 +13,8 @@ export class CreateExpenseDialogComponent implements OnInit {
   @Output() openChange = new EventEmitter<boolean>();
   @Output() expenseCreated = new EventEmitter<ExpenseModel>();
   form = new FormGroup({
-    title: new FormControl(null, [Validators.required, _thereAreNoWhiteSpace]),
-    amount: new FormControl(null, [Validators.required, _thereAreNoWhiteSpace]),
+    title: new FormControl(null, [Validators.required, thereAreNoWhiteSpace]),
+    amount: new FormControl(null, [Validators.required, thereAreNoWhiteSpace]),
   });
 
   constructor() { }

@@ -1,6 +1,6 @@
 import { FormControl, ValidationErrors } from '@angular/forms';
 
-export function _thereAreNoWhiteSpace(control: FormControl): ValidationErrors | null {
+export function thereAreNoWhiteSpace(control: FormControl): ValidationErrors | null {
   if (!control.value?.trim) {
     return null;
   }
