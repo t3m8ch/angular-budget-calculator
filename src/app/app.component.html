@@ -2,14 +2,17 @@
   <div class='tui-container tui-container_adaptive'>
     <div class='tui-row tui-row_adaptive'>
       <div class='tui-col_md-4 tui-col_xs-12'>
-        <app-revenues-list [revenues]='revenues'></app-revenues-list>
+        <app-revenues-list [revenues]='revenues' (addRevenue)='onAddRevenue()'></app-revenues-list>
       </div>
       <div class='tui-col_md-4 tui-col_xs-12'>
-        <app-expenses-list [expenses]='expenses'></app-expenses-list>
+        <app-expenses-list [expenses]='expenses' (addExpense)='onAddExpense()'></app-expenses-list>
       </div>
       <div class='tui-col_md-4 tui-col_xs-12'>
         <app-budget [revenues]='revenues' [expenses]='expenses'></app-budget>
       </div>
     </div>
   </div>
+
+  <app-create-revenue-dialog [(open)]='createRevenueDialogIsOpen' (revenueCreated)='addRevenue($event)'></app-create-revenue-dialog>
+  <app-create-expense-dialog [(open)]='createExpenseDialogIsOpen' (expenseCreated)='addExpense($event)'></app-create-expense-dialog>
 </tui-root>

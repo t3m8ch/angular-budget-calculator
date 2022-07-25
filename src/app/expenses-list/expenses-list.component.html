@@ -1,4 +1,7 @@
 <h2 class='tui-text_h3'>Расходы</h2>
-<app-activity-item *ngFor='let expense of expenses' [title]='expense.title'
-                   [amount]='-expense.amount.toNumber()'></app-activity-item>
-<button tuiButton appearance='outline' class='tui-space_top-4'>Добавить расход</button>
+<app-activity-item
+  *ngFor='let expense of expenses'
+  [title]='expense.title'
+  [amount]='-expense.amount.toNumber()'
+></app-activity-item>
+<button tuiButton appearance='outline' class='tui-space_top-4' (click)='addExpense.emit()'>Добавить расход</button>

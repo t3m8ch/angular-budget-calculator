@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { RevenueModel } from './revenue.model';
 
 @Component({
@@ -7,6 +7,7 @@ import { RevenueModel } from './revenue.model';
 })
 export class RevenuesListComponent implements OnInit {
   @Input() revenues: RevenueModel[] = [];
+  @Output() addRevenue = new EventEmitter();
 
   constructor() { }
 

@@ -1,0 +1,14 @@
+<ng-template
+  let-observer
+  [tuiDialogOptions]="$any({label: 'Новый расход', size: 's'})"
+  [tuiDialog]="open"
+  (tuiDialogChange)='openChange.emit()'
+>
+  <form class='b-form' [formGroup]='form' (ngSubmit)='createExpense()'>
+    <tui-input formControlName='title'>Название расхода</tui-input>
+    <tui-input-number class='tui-space_top-2' [postfix]='"RUB" | tuiCurrency' formControlName='amount'>
+      Сумма
+    </tui-input-number>
+    <button tuiButton class='tui-space_top-3'>Добавить расход</button>
+  </form>
+</ng-template>
