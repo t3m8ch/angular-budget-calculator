@@ -13,6 +13,7 @@ import { ActivityItemComponent } from './activity-item/activity-item.component';
 import { CreateRevenueDialogComponent } from './create-revenue-dialog/create-revenue-dialog.component';
 import { CreateExpenseDialogComponent } from './create-expense-dialog/create-expense-dialog.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TuiAutoFocusModule } from '@taiga-ui/cdk';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     TuiCurrencyPipeModule,
     ReactiveFormsModule,
     TuiMarkerIconModule,
+    TuiAutoFocusModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -5,7 +5,7 @@
   (tuiDialogChange)='openChange.emit()'
 >
   <form class='b-form' [formGroup]='form' (ngSubmit)='createRevenue()'>
-    <tui-input formControlName='title'>Название дохода</tui-input>
+    <tui-input formControlName='title' tuiAutoFocus>Название дохода</tui-input>
     <tui-input-number class='tui-space_top-2' [postfix]='"RUB" | tuiCurrency' formControlName='amount'>
       Сумма
     </tui-input-number>
