@@ -1,7 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { RevenueModel } from '../models/revenue.model';
 import { ExpenseModel } from '../models/expense.model';
-import bignumber, { BigNumber } from 'bignumber.js';
+import bignumber from 'bignumber.js';
+import { calculateBudget } from '../services/budget-calculator.service';
 
 @Component({
   selector: 'app-budget',
@@ -16,16 +17,6 @@ export class BudgetComponent implements OnInit {
   ngOnInit(): void {}
 
   calculateBudget(): bignumber {
-    const revenuesSum =
-      this.revenues.length > 0
-        ? this.revenues.map((model) => model.amount).reduce((prev, curr) => prev.plus(curr))
-        : new BigNumber('0');
-
-    const expenseSum =
-      this.expenses.length > 0
-        ? this.expenses.map((model) => model.amount).reduce((prev, curr) => prev.plus(curr))
-        : new BigNumber('0');
-
-    return revenuesSum.minus(expenseSum);
+    return calculateBudget(this.revenues, this.expenses);
   }
 }
